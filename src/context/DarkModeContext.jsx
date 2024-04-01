@@ -5,7 +5,10 @@ const DarkModeContext = createContext();
 
 //2.Create component which will be a custom provider
 function DarkModeProvider({ children }) {
-  const [isDarkMode, setIsDarkMode] = useLocalStorageState(false, "isDarkMode");
+  const [isDarkMode, setIsDarkMode] = useLocalStorageState(
+    window.matchMedia("(prefers-color-scheme:light)").matches,
+    "isDarkMode"
+  );
 
   useEffect(
     function () {
