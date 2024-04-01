@@ -21,8 +21,6 @@ function DashboardLayout() {
 
   const { confirmedStays, isLoading: isLoading2, numDays } = useRecentStays();
 
-  console.log(bookings, isLoading1, isLoading2, confirmedStays);
-
   if (isLoading1 || isLoading2 || isLoading3) return <Spinner />;
 
   return (

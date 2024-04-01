@@ -15,6 +15,5 @@ export function useBooking() {
     retry: false,
   });
 
-  console.log("yeta", booking);
   return { isLoading, error, booking };
 }
